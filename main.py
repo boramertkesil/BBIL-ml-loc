@@ -18,6 +18,7 @@ rssi_test  = data[TEST][RSSI]
 # Initialize kNN model.
 knn_localizer = kNNLocalizer(
     k=33,
+    metric="manhattan",
     layers=[KalmanFilterLayer(Q=0.04, R=4.0)]
 )
 
